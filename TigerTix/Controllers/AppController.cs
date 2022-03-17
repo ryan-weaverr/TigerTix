@@ -9,7 +9,6 @@ namespace TigerTix.Controllers
 {
     public class AppController : Controller
     {
-     
         public IActionResult Index(IndexViewModel model)
         {
             return View();
