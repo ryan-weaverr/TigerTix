@@ -4,27 +4,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TigerTix.Data;
+using TigerTix.Data.Entities;
 using TigerTix.ViewModels;
 
 namespace TigerTix.Controllers
 {
     public class AppController : Controller
     {
-        private readonly TigerTixContext _context;
-        public AppController(TigerTixContext context)
+        private readonly IUserRepository _userRepository;
+        public AppController(IUserRepository userRepository)
         {
-            _context = context;
+            _userRepository = userRepository;
         }
 
         public IActionResult ShowUsers()
         {
-            var results = from u in _context.Users
+            var results = from u in _userRepository.GetAllUsers()
                           select u;
             return View(results.ToList());
         }
 
-        public IActionResult Index(IndexViewModel model)
+        public IActionResult Index(User user)
         {
+            _userRepository.SaveUser(user);
+            _userRepository.SaveAll();
+
             return View();
         }
     }

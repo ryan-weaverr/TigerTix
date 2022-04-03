@@ -20,6 +20,7 @@ namespace TigerTix
         {
             
             services.AddControllersWithViews();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddDbContext<TigerTixContext>(cfg =>
             {

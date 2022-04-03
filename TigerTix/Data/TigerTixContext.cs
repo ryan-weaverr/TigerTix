@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TigerTix.Data.Entities;
 
+
 namespace TigerTix.Data
 {
     public class TigerTixContext : DbContext
