@@ -31,5 +31,13 @@ namespace TigerTix.Controllers
 
             return View();
         }
+
+        public IActionResult RegesterUser(User user)
+        {
+            _userRepository.SaveUser(user);
+            _userRepository.SaveAll();
+
+            return View();
+        }
     }
 }

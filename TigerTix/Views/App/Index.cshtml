@@ -4,36 +4,67 @@
 }
 
 <!DOCTYPE html>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .header {
+        font-family:Verdana;
+        font-size: 30px;
+        background-image: linear-gradient(to right, rgb(255 140 0), rgb(178 0 255));
+        color: white;
+        padding: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .nav {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 50px;
+        list-style-type: none;
+    }
+    .nav li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+    }
+
+
+</style>
 <html>
+
 <head>
-    <title>TigerTix: @ViewBag.Title</title>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="Index.cshtml.css" />
+
 </head>
-<body>
+<body style="background-color:dimgray;">
 
     <div class="header">
-        TigerTix
+        <h2 class="logo">TigerTix</h2>
+
+        <ul class="nav">
+            <li><a href="App/ShowEvents">Events</a></li>
+            <li><a href="App/RegesterUser">Sign Up</a></li>
+            <li><a href="App/ShowUsers">View Users</a></li>
+            <li><a href=""onclick="alert('Welcome to our software engineering project! -Christopher Weaver, Edward Ng, Andrew Jensen')">About</a></li>
+
+        </ul>
     </div>
 
-    
+    <h2 style="color:white"font-size: 30px>
+        What's New &#x2193;
+    </h2>
 
-    <form method="post">
-        <label>Username:</label>
-        <br />
-        <input type="text" name="username" />
-        <br />
-        <label>Firstname:</label>
-        <br />
-        <input type="text" name="firstname" />
-        <br />
-        <label>Lastname:</label>
-        <br />
-        <input type="text" name="lastname" />
-        <br />
-        <input type="submit" name="Store Name" />
-    </form>
 
-    <div class="footer">
-        &copy; 2022 PandaExpress Development. All rights reserver.
+    <div class="footer" style="color:white">
+        &copy; 2022 PandaExpress Development. All rights reserved.
     </div>
 
 </body>

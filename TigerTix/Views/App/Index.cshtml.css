@@ -1,0 +1,20 @@
+﻿.helloWorld {
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+    color: blue;
+}
+
+h1 {
+    color: darkorange;
+    font-family: verdana;
+    font-size: 300%;
+}
+
+p {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+    border: 2px solid black;
+    margin: 50px;
+}
