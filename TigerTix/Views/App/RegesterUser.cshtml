@@ -5,31 +5,48 @@
 
 <!DOCTYPE html>
 <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100vh;
+        background-color: #f1f1f1;
+    }
+
+    .square {
+        border-radius: 25px;
+        background-color: white;
+        padding: 20px;
+        width: 400px;
+        height: 600px;
+    }
 </style>
 <html>
 
 <head>
     <title>@ViewBag.Title</title>
 </head>
-<body>
+<body style="background-color:darkorange">
 
-    <h1>Sign Up</h1>
-
-    <form method="post">
-        <label>Username:</label>
-        <br />
-        <input type="text" name="username" />
-        <br />
-        <label>Firstname:</label>
-        <br />
-        <input type="text" name="firstname" />
-        <br />
-        <label>Lastname:</label>
-        <br />
-        <input type="text" name="lastname" />
-        <br />
-        <input type="submit" name="Store Name" />
-    </form>
-
+    
+    <div class="square">
+        <h1>Sign Up</h1>
+        <form method="post">
+            <label>Username:</label>
+            <br />
+            <input type="text" name="username" />
+            <br />
+            <label>Firstname:</label>
+            <br />
+            <input type="text" name="firstname" />
+            <br />
+            <label>Lastname:</label>
+            <br />
+            <input type="text" name="lastname" />
+            <br />
+            <input type="submit" name="Store Name" />
+        </form>
+    </div>
 </body>
 </html>
