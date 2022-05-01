@@ -1,1 +1,63 @@
-﻿
+﻿@model IndexViewModel
+@{
+    ViewBag.Title = "Events";
+}
+
+<!DOCTYPE html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .header {
+        font-family: Verdana;
+        font-size: 30px;
+        background-image: linear-gradient(to right, rgb(255 140 0), rgb(178 0 255));
+        color: white;
+        padding: 2px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 50px;
+        list-style-type: none;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+
+</style>
+<html>
+
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body style="background-color:dimgray">
+
+
+    <div class="header">
+        <h2 class="logo">TigerTix</h2>
+
+        <ul class="nav">
+            <li><a href="App/ShowEvents">Events</a></li>
+            <li><a href="App/RegesterUser">Sign Up</a></li>
+            <li><a href="App/ShowUsers">View Users</a></li>
+            <li><a href="" onclick="alert('Welcome to our software engineering project! -Christopher Weaver, Edward Ng, Andrew Jensen')">About</a></li>
+            <li><a href=""></a></li>
+
+        </ul>
+    </div>
+</body>
+</html>

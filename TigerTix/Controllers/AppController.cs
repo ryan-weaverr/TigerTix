@@ -39,5 +39,10 @@ namespace TigerTix.Controllers
 
             return View();
         }
+
+        public IActionResult ViewEvents()
+        {
+            return View();
+        }
     }
 }
